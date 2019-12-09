@@ -1,0 +1,1035 @@
+open terminal 
+CTRL+ALT+T
+
+close terminal
+CTRL+D
+
+close everything
+killall
+
+clear terminal
+CTRL+L or clear
+
+to jump to beginning of the line
+CTRL+A
+
+to jump to end 
+CTRL+E
+
+to open new window 
+CTRL+SHIFT+N
+
+close window
+CTRL+D
+
+maximize or minimize window
+Fn + Alt + F10
+
+Checks if website is online
+ping website -c number
+e.g. 
+ping www.google.com -c 5
+
+what you can do with the terminal
+commandlinefu.com
+
+To find out out which directory youre in
+print working directory
+pwd
+
+list storage
+to see whats in folder
+ls
+
+change directory
+to jump from one folder to another
+cd
+
+To jump up one level in the folder
+..
+
+De and tab writes out desktop
+
+To make a directory/folder 
+go to where you want it and enter
+mkdir
+
+to remove something 
+you cant get it back!!!
+rm 
+
+to use recursive flag, will remove everything thats inside the directory youre removing
+-r
+
+to remove directory that doesnt have files inside
+rmdir
+
+names for directories:
+NO SPACES
+use dash instead
+
+to create file
+touch
+
+to show useage in system
+du
+use -h flag (for human) to make it readable for humans
+
+cat = concatenate = combine
+
+to write text in a file:
+cat > file.txt
+
+to read file
+cat file.txt
+
+to add / APPEND after last line of text in file
+cat >> file.txt
+
+to get out of editing file, go to new line and press
+CTRL + C
+
+text editor to open from terminal
+go to desktop and write
+nano
+
+to open specific file in nano write 
+nano + file name
+
+instruction manual to the terminal
+man
+man man
+
+flag to show all, also hidden files
+-a
+
+li -a = shows all files, also hidden files
+
+cat filename = shows that file
+
+to just display something in the terminal, write
+echo + text you want to display
+
+to find out what the extension/type of file, write
+file + filename
+
+to MOVE or RENAME files or directories use
+mv
+
+to copy files or directories
+cp
+
+to display image from the terminal 
+eog filename
+
+to unzip files to current directory
+unzip <path to file to be unzipped>
+
+FLAGS
+
+-i 	because it doesnt matter if youre big or small (also if youre a letter)
+
+-w 	word (for word count: wc -w	for searching for only that word: grep -w)
+
+-o	only (for redirecting only specific word into own file: grep -iow > filename)
+
+wifi
+W396NLP73U78669M
+
+
+GITHUB GIT
+
+woking directory
+staged files 
+commited files
+
+remote repository
+
+git in the terminal
+
+configure user
+git config --global user.name <username>
+git config --global user.email <email>
+git config --global --list (to check if it worked)
+
+to download to local
+git clone <URL>
+
+where am i / the pwd of git is
+git status
+
+to initialize git in a project (github not necessary), go to project directory and:
+git init
+
+to get rid of git in a project
+rm -rf .git
+
+1. to move file to STAGING area - to move file from working directory to staged
+git add <file>
+
+2. to move file to LOCAL git - to move to git repo
+git commit -m "<comment>"
+
+3. to move file to REMOTE github - to push file to github (remote) username and password required	
+git push origin master
+
+to connect local repo to remote repo, go to local git directory and enter:
+git remote add origin <url of repo in github>
+
+to pull from remote (github) to local when "gite remote add ..." has been used:
+git pull origin master --allow-unrelated-histories
+
+to see configurations for git
+nano ~/.gitconfig
+
+to customize git command e.g. git log with custom command hist:
+git config --global alias.hist "log --oneline --graph ..."
+
+
+with GIT INIT and GIT REMOTE ADD ORIGIN url
+1. -- create repo in github --
+2. -- copy url from github --
+3. git init (in local repo)
+4. git remote add origin <url>
+5. git pull origin master --allow-unrelated-histories
+6. git add <all relevant files in local repo>
+7. git commit -m <"comment">
+8. git push origin master
+
+
+
+HTML and CSS
+
+title attribute:
+tooltip / details on hover over element
+eg: title="This text gives more details about the"
+
+float: left
+width and margin required
+
+
+clear: left
+
+<table> ... </table>
+Everything goes inside table tag
+
+<tr> ... </tr>
+table row
+
+th
+table header
+
+scope attribute
+used inside the th tag, row or col
+
+tfoot
+table footer
+
+td
+table data
+
+colspan
+rowspan
+
+
+Radio button
+can only pick one option, inside form and then input tags
+
+Checkbox
+can pick several different, inside form and then input tags
+
+input type=""
+checkbox or radio or file or date or email or password or text or url
+
+input name=""
+same for all related options
+
+checked
+
+required
+
+minlength="", maxlength=""
+
+placeholder=""
+what should be shown in search or text input before user writes something
+
+action=""
+where the form should be sent to/retrieve data from
+
+<fieldset> ... </fieldset>
+for related data inside a form
+
+<legend> ... </legend>
+creates "header" with line around children elements
+
+<textarea> ... </textarea>
+
+height: 100vh
+viewport height
+
+
+
+FLEXBOX
+
+main axis = row = x axis
+
+cross axis = column = y axis
+
+display: flex;
+for the flexbox container
+---container
+
+flex-direction:
+row;
+row-reverse;
+column;
+column-reverse;
+---container
+
+flex-wrap:
+nowrap;
+wrap;
+wrap-reverse;
+---container
+
+flex-flow: (=flex-direction + flex-wrap)
+e.g. 
+flex-flow: row wrap;
+---container
+
+justify-content: (horizontally align)
+flex-start;
+flex-end;
+center;
+space-between;
+space-around;
+space-evenly;
+---container
+
+align-items: (vertically align)
+flex-start;
+flex-end;
+center;
+stretch;
+baseline;
+---container
+
+align-self: ******
+flex-start;
+flex-end;
+center;
+stretch;
+baseline;
+---item
+
+flx-basis:
+e.g. 300px;
+gives a size to one item, rest of items get left-over space
+---item
+
+flex-grow:
+e.g. 2;
+if all children have flex-grow: 1; except one that has flex-grow: 2;, the last one will be twice the size as the others.
+---item
+
+flex-shrink:
+e.g. 0;
+if all children have flex-shrink: 1; except one that has flex-shrink: 0;, the last one will not shrink, but the others will.
+---item
+
+
+
+
+CSS
+
+box-sizing: border-box
+margin 0
+padding 0
+
+
+custom CURSOR
+cursor: url(path.png), auto;
+
+
+click through layer:
+put this on the transparent/top layer:
+pointer-events: none;
+
+
+
+Attribute selector
+
+Target selector
+e.g. p:target
+
+adjacent sibling selector
+e.g.
+div + p
+
+general sibling selector
+e.g.
+div ~ p
+
+child selector
+div > p
+
+
+
+Pseudo classes:
+
+:hover
+
+first child pseudo selector
+:first-child
+
+:last-child
+
+:nth-child(n)
+or 
+:nth-child(odd/even)
+
+
+div:not(.class)
+styles all divs, except the one with .class
+
+:active
+
+:focus
+
+:visited
+
+
+Pseudo elements:
+
+::first-line
+
+::first-letter
+
+::before
+
+::after
+
+::selection
+
+
+
+GRID
+
+grid-column 
+grid-column-start / -end
+
+grid-row
+grid-row-start / -end
+
+Grid-area 
+accepts four values separated by slashes: 
+grid-row-start, grid-column-start, grid-row-end, followed by grid-column-end.
+
+
+SCSS / SASS
+
+mkdir <project>
+touch index.html main.scss main.css
+node-sass main.scss main.css
+node-sass --watch main.scss main.css
+
+variables
+
+mixins
+@mixin <name> {
+	<block of css>
+}
+ 
+to include:
+body {
+	@include <name>;
+}
+
+
+@import 
+to import other stylesheets, name them _...
+
+
+PYTHON
+ANACONDA
+
+to open anaconda navigator from terminal
+anaconda-navigator
+
+to save python script (python extension)
+.py
+
+to check if a number (or variable) is an even number, use modulo
+%
+If result is 0 its an even number, if result >0 its and odd number (or variable)
+
+to the power of (hoch, som i m2 cm2 etc)
+**
+
+variables can be overwritten to different datatypes
+
+to check what datatype a variable is, enter:
+type(variable)
+
+
+
+https://source.unsplash.com/DN4wKpffIAI
+
+container houseboat
+https://unsplash.com/photos/SmIM3m8f3Pw
+
+creepy habour
+https://unsplash.com/photos/DN4wKpffIAI
+
+flashlight in hand, png
+http://pngimg.com/uploads/flashlight/flashlight_PNG55961.png
+
+flashlight white
+https://www.lifegear.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/g/lg02-10160-whi.png
+
+
+
+
+
+JAVASCRIPT
+
+Operators 
+
+= 
+assignment operator
+
+== 
+equality operator
+
+===
+strict equality
+
+!=
+inequality operator, NOT
+
+!== strict inequality
+
+&&
+AND logical operator
+both expressions must be true to return true
+
+!= and !==
+NOT logical operators
+
+||
+OR logical operator
+one or both expressions must be true to return false
+
+%
+remainder operator
+
+++
+increment operator, eg.
+i++; 
+= 
+i = i + 1
+
+--
+decrement operator
+i--;
+=
+i = i - 1
+
++=
+adds the value on the right to value on the left 
+add on the right first, that values is assigned to var on the left
+
+-=
+subtracts value on the right from left valriable
+
+*= 
+multiplies the variable on the left with a number
+
+/=
+operator that divides left variable by right value
+
+data types
+
+string
+everything inside "" or ''
+
+number
+int or float
+
+boolean
+null 
+undefined
+symbol
+
+concatenation
+to add strings together
+
+typeof ...
+to chech which data type
+
+... .length
+returns the length
+
+... .charAt()
+eg to find last letter:
+console.log(bandName.charAt(bandName.length -1);
+
+... .toLowerCase()
+
+... .toUpperCase()
+
+\
+escape
+use before the symbol etc you want JS to ignore as operator
+
+\n
+escape character, new line
+
+conditional operator / ternary
+let temperature = 29;
+let outfit = temperature >= 25 ? "shorts" : "pants";
+like if else statement
+
+Please excuse My Dear Aunt Sally
+Parenthesies
+Multiplication
+Division
+Addition
+Subtraction
+
+Falsies
+false
+0 - zero
+"" - empty string
+null - you have to assign null where you intentionally want to leave out a value
+undefined - everything that's not defined
+NaN - Not a Number
+
+multidimensional array
+array nested inside other array
+when pointing to multidimensiional arrays, it could look like this
+myArray[2][1][1]
+first set of brackets refer to the first part-array
+second set of brackets to the nested array
+third set of brackets to the nested inside the nested array
+
+strings are immutable
+cannot change only parts of string, must reassign new value to the string
+
+arrays are mutable, eg
+let myArray = [50,60,70];
+myArray[0] = 30;
+// = [30,60,70]
+
+push() function
+pushes data onto end of array
+letName.push(...);
+
+pop() function
+"pops" end of array and makes it into its own variable
+newLetName = letName.pop(...);
+
+shift() function
+like pop, but removes the first element instead of last
+
+unshift() function
+add things to beginning of array
+
+function myFunction()
+
+parameters
+acts as placeholders in a function, can be changed when the function is called
+
+arguments
+what will replace the parameters when you call the function
+
+local
+only inside function, in that scope
+overrides the global if a local and global variable have the same name
+
+global
+when variables are declared outside of functions
+
+return
+to return something from a function
+
+alert("");
+
+parseInt();
+turns string into integer
+
+parseFloat();
+turns string into floating point number
+
+global scope / static scope
+
+block scope (local)
+
+DATA TYPES:
+
+OBJECTS
+everything with {}
+also arrays
+
+PRIMITIVES
+- number
+- string
+- boolean
+- undefined
+- null
+
+If it's not a primitive, it's an OBJECT
+
+PRIMITIVES are the building blocks of objects
+
+comparisons:
+
+1 === 1 //true
+false === true //false
+true === true //true
+
+with PRIMITIVES: if it looks the same, it's probably the same. Compares values
+
+{} === {} //false
+with OBJECTS: stored in different locations, doesn't compare value, so only comparing one object with itself will return true, otherwise false
+
+to COMPARE OBJECTS
+refer to REFERENCES
+JS only cares about reference in memory
+so when you assign one object (thats already made) to a new variable, and you change a key/value pair in one of the object (/varibales), it changes in both objects (/variables) because they have the same memory address / reference
+
+
+SEMANTIC UI CDN
+<link
+     rel="stylesheet"
+     href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+   />
+
+
+REACT / JSX
+
+H1 element in JSX:
+<h1>Some text</h1>
+
+in plain react equals to:
+
+React.createElement("h1", {className: "headerText" (= all attributes in this object)}, "Thw text you want to display")
+
+The JSX version is syntactic sugar, gets "translated" into the second version (React.create...)
+
+
+
+REACT DEPENDENCIES
+
+REACT ROUTER
+terminal:
+npm install react-router-dom
+index.js:
+import { BrowserRouter as Router } from "react-router-dom";
+import { Routes } from "./routes";
+(plus create routes.js
+
+Font Awesome
+terminal:
+npm install -D @fortawesome/fontawesome-free
+index.js:
+import "@fortawesome/fontawesome-free/css/all.css";
+
+SASS / SCSS
+terminal:
+npm install --save-dev node-sass
+index.js:
+import "./sass/style.scss";
+
+Bootstrap
+terminal:
+npm install --save-dev node-sass
+index.js:
+import "bootstrap/dist/css/bootstrap.min.css";
+OR
+src/sass/style.scss:
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+Reactstrap
+terminal:
+npm install --save-dev reactstrap
+(evt med react react-dom efter)
+index.js:
+import { ---components--- } from "reactstrap";
+
+Semantic UI
+terminal:
+npm i --save-dev semantic-ui-react
+
+
+UUID
+terminal: 
+npm install --save-dev uuidv4
+in relevant js file, eg App.js:
+import uuid from "uuid/v4";
+
+
+PARSEINT
+parseInt(num, base)
+num = number you want to make integer
+base = 10 if you wanna use decimal number system (binary is base 2)
+
+
+REACT REDUX
+------------------
+
+npx create-react-app NAME-OF-APP
+npm install redux react-redux
+
+-------------------------------------
+
+To use Google Redux dev tool:
+https://github.com/zalmoxisus/redux-devtools-extension
+- Add extension
+- Add this in the createStore() as the second argument:
+window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
+Like this:
+
+const store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
+//////OR////////
+
+//REDUX DEVTOOLS EXTENSION NPM PACKAGE WITH MIDDLEWARE
+
+npm install --save redux-devtools-extension
+
+go to store.js:
+import { composeWithDevTools } from 'redux-devtools-extension';
+
+insert this as argument after the rootReducer and initialState (if there is any):
+createStore(rootReducer, inititalState, composeWithDevTools(applyMiddleware(thunk))) 
+
+//REDUX DEVTOOLS EXTENSION NPM PACKAGE WITHOUT MIDDLEWARE AND ENHANCERS
+
+npm install --save redux-devtools-extension
+
+go to store.js:
+import { devToolsEnhancer } from "redux-devtools-extension";
+
+insert this as argument after the rootReducer and initialState (if there is any):
+createStore(rootReducer, initialState, devToolsEnhancer());
+
+-------------------------------------
+
+
+allReducers = imported in the src/index.js
+		exported from the src/reducers (from index.js)
+- where { combineReducers } have been imported from "redux"
+
+combineReducers takes an object as argument with all the different reducers:
+
+const allReducers = combineReducers({
+	reducer1: reducer1 (imported),
+	reducer2: reducer2 (imported)
+})
+export default allReducers;
+
+
+PROVIDER
+to get access to the whole store / all the states from the whole App
+
+import {Provider} from "react-redux";
+
+-wrap the App component in the Provider:
+
+<Provider store={store} >
+	<App />
+</Provider>
+
+
+useSelector, useDispatch:
+in the App component, import { useSelector, useDispatch } from "react-redux";
+
+const counter = useSelector(state => state.counter)
+//To access the state with the key "counter"
+
+useDispatch to dispatch an action
+
+
+------------------------
+NODE 
+------------------------
+
+npmjs.com
+
+nodemon
+npm install -g nodemon
+- Like live-server but for node.js
+- runs in the terminal all the time
+
+
+
+MONGO DB
+MONGOOSE
+
+npm i mongoose
+
+go to record shop / app.js
+under initialise and logging
+
+```
+//connect to db
+mongoose.connect("mongodb://localhost:27017/record-shop", {
+	useNewUrlParser: true,
+	useCreateIndex: true,
+	useUnifiedTopology: true
+});
+
+mongoose.connection.on("error", console.error);
+mongoose.connection.on("open", () => {
+	console.log("Database connection established");
+});
+```
+
+create directory models in the project
+in models create three files
+Orders.js
+Record.js
+User.js
+
+in Order.js:
+const mongoose = require("mongoose")
+
+const OrderSchema = new mongoose.Schema({
+	quantity: {
+		type: Number,
+		required: true	
+	},
+	record: {
+		type: Number,
+		required: true
+	}
+});
+
+module.exports = mongoose.model("Order", OrderSchema);
+
+
+in Record.js
+const mongoose = require("mongoose");
+
+const RecordSchema = new mongoose.Schema({
+	title: {
+		type: String,
+		required: true
+	},
+	artist: {
+		type: String,
+		required: true
+	},
+	year: {
+		type: Number,
+		required: true
+	},
+	img: {
+		type: String,
+		required: true
+	},
+	price: {
+		type: Number,
+		required: true
+	}
+});
+
+module.exports = mongoose.model("Record", RecordSchema);
+
+in User.js
+const mongoose = require("mongoose");
+
+const UserSchema = new mongoose.Schema({
+	firstName: {
+		type: String,
+		required: true
+	},
+	lastName: {
+		type: String,
+		required: true
+	},
+	email: {
+		type: String,
+		required: true
+	},
+	password: {
+		type: String,
+		required: true
+	}
+});
+
+module.exports = mongoose.model("User", UserSchema);
+
+
+
+TO FILL UP DATABASE WITH FAKER
+We seed it
+
+make new directory called seed in the root
+new file inside called user_seed.js
+
+install faker 
+npm install faker
+
+in user_seed.js
+
+let faker = require("faker");
+const mongoose = require("mongoose")
+const User = require("../models/User")
+
+make IIFE function
+(async = () => {
+	//Connect to db
+	mongoose.connect("mongodb://localhost:27017/record-shop", {
+		useNewUrlParser: true,
+		useCreateIndex: true,
+		useUnifiedTopology: true
+	});
+	
+	mongoose.connection.on("error", console.error);
+	mongoose.connection.on("open", () => {
+		console.log("Database connection established")	
+	});	
+
+	console.log("This is the purge");
+
+	try {
+		await User.deleteMany({});
+		consoole.log("Users purged")
+	} catch (err) {
+		console.error(err)	
+	}
+
+	const userPromises = Array(50).fill(null).map(() => {
+		const user = new User({
+			firstName: faker.name.firstName(),
+			lastName: faker.name.lastName(),
+			email: faker.internet.email(),
+			password: faker.internet.password()
+		});
+		
+		return user.save();
+	})
+
+	try {
+		await Promise.all(userPromises);
+		console.log("The users are seeded");
+	} catch (e) {
+		consolo.erroor(e);	
+	}
+
+	mongoose.connection.close();
+})();
+
+
+
+MONGODB ATLAS
+
+mongoimport --host cluster0-shard-00-00-kva3m.gcp.mongodb.net:27017 --db starwars --type json --file ~/Desktop/starwarscharacterdata.json --jsonArray --authenticationDatabase admin --ssl --username <USERNAME> --password <PASSWORD>
+
+
+
+
+
